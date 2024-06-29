@@ -96,7 +96,7 @@ public class TestCases extends ExcelDataProvider{ // Lets us read the data
                         driver.navigate().back();
 
                         Thread.sleep((new java.util.Random().nextInt(3) + 2) * 1000);
-                        //for(List<String> listOfRows : Object[][]){
+                        
                                 
                         
 
@@ -199,41 +199,16 @@ public class TestCases extends ExcelDataProvider{ // Lets us read the data
 
         @Test(dataProvider = "excelData", dataProviderClass = ExcelDataProvider.class)
         public void testCase05(String sidebarMainOption) throws InterruptedException{
-                //String sidebarMainOption;
-                //System.out.println(sidebarMainOption);
-                //String[] inputSearchStrings = {"Movies","Music","Games"};
-                
-
-                // SoftAssert softAssert = new SoftAssert();
-                // softAssert.assertEquals(sidebarMainOption,inputSearchStrings[dataInputStringIndex]);
-               
-                //softAssert.assertAll();
-
-                // if(sidebarMainOption.equals("Movies")){
-                        
-                //         sidebarMainOption = "Films";
-                // }
-                // else if(sidebarMainOption.equals("Games")){
-                //         sidebarMainOption = "Gaming";
-                //}
-
-                //sidebarMainOption ="Games";
-                // Wrappers.wrapper_clickMainMenu(driver, wait);
-                // Wrappers.wrapper_clickSidebarMainOption(driver, wait, sidebarMainOption);
-                //driver.navigate().back();
                 WebElement weSearchbox = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='search']")));    
-                //input[@id="search"]
                 weSearchbox.clear();
                 weSearchbox.sendKeys(sidebarMainOption);
                 weSearchbox.sendKeys(Keys.ENTER);
 
-
                 Thread.sleep((new java.util.Random().nextInt(3) + 2) * 1000);
 
                 long totalCountOfViews = Wrappers.wrapper_getTotalNumberOfViewsCounts(driver, wait);
-                //span[@class='inline-metadata-item style-scope ytd-video-meta-block'][1]"));
+                
                 Thread.sleep((new java.util.Random().nextInt(3) + 2) * 1000);
-                //dataInputStringIndex++;
 
                 System.out.println("The Total amount of views below 1cr are  : " + totalCountOfViews);                
 
@@ -269,37 +244,3 @@ public class TestCases extends ExcelDataProvider{ // Lets us read the data
 
 
 
-/*
- * 
- * 
- * // WebElement weSearch = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='search']")));
-                        // weSearch.clear();
-                        // weSearch.sendKeys("Christian Music");
-
-***************************
-        //                 try {
-        //     Thread.sleep((new java.util.Random().nextInt(3) + 2) * 1000);
-        // } catch (InterruptedException e) {
-        //     // TODO Auto-generated catch block
-        //     e.printStackTrace();
-        // }
-
-****************************
-
-
-//div[@id="dismissible"]//span[contains(text(),'Top selling')]/ancestor::div[@class="grid-subheader style-scope ytd-shelf-renderer"]/following-sibling::div//div[@id='right-arrow']
-                        //div[@id="dismissible"]//a[@title='Top selling']/ancestor::div[@class="grid-subheader style-scope ytd-shelf-renderer"]/following-sibling::div//div[@id='right-arrow']
-                        
-
-                        //div[@id='right-arrow'])[4]
-
-                        //div[@id='dismissible']//div[@class='yt-spec-touch-feedback-shape yt-spec-touch-feedback-shape--touch-response']
-
-
- */
-
-
-                        //div[@id='dismissible']//span[contains(text(),'"+sectionName+"')]
-
-                        //ytd-badge-supported-renderer[@class='style-scope ytd-grid-movie-renderer']/following-sibling::span[@id='video-title']
-               
