@@ -154,7 +154,7 @@ public class TestCases extends ExcelDataProvider{ // Lets us read the data
                         Thread.sleep((new java.util.Random().nextInt(3) + 2) * 1000);
                         Integer noOfTracks = Wrappers.wrapper_getNumberOfTracks(driver, wait);
                         System.out.println("No of Tracks : " + noOfTracks);
-                        //softAssert.assertTrue(noOfTracks<50,"The no. of tracks are greater than 50");
+                        
                         if(noOfTracks<=50)     
                                 System.out.println("The no. of tracks are less than or equal to 50");
                                 else
@@ -178,7 +178,7 @@ public class TestCases extends ExcelDataProvider{ // Lets us read the data
                         Wrappers.wrapper_clickSidebarMainOption(driver, wait, sidebarMainOption);
                         Thread.sleep((new java.util.Random().nextInt(3) + 2) * 1000);
                         String sectionName = "Latest news posts";
-                        //Wrappers.wrapper_clickShowMoreButton(driver,wait, By.xpath("(//button[@aria-label='Show more'])[2]"));
+                        
                         Thread.sleep((new java.util.Random().nextInt(3) + 2) * 1000);
                         Wrappers.wrapper_getLatestNewsPostsTitleNBody(driver, wait, sectionName);
                         Thread.sleep((new java.util.Random().nextInt(3) + 2) * 1000);
